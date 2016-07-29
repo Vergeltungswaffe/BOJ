@@ -1,13 +1,16 @@
-import java.util.*;
-
+import java.util.Scanner;
+ 
 public class Main
 {
-  public static void main(String[] args)
-  {
-    Scanner scan = new Scanner(System.in);
-    int a = scan.nextInt();
-    int b = scan.nextInt();
-    System.out.println(a+b);
-    scan.close();
-  }
+ 
+    public static void main(String[] args)
+    {
+        Scanner key = new Scanner(System.in);
+        int a, b;
+        a = key.nextInt();
+        b = key.nextInt();
+        int sum = a+b;
+        System.out.print(sum);
+    }
+ 
 }
