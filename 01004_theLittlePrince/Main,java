@@ -1,0 +1,33 @@
+import java.util.*;
+ 
+public class Main
+{
+ 
+    public static void main(String[] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        int t = scan.nextInt();
+        for(int i=0;i<t;i++)
+        {
+            int x1 = scan.nextInt();
+            int y1 = scan.nextInt();
+            int x2 = scan.nextInt();
+            int y2 = scan.nextInt();
+            int n = scan.nextInt();
+            int cnt=0;
+            for(int j=0;j<n;j++)
+            {
+                int cx = scan.nextInt();
+                int cy = scan.nextInt();
+                int r = scan.nextInt();
+                long dist1 = (cx-x1)*(cx-x1)+(cy-y1)*(cy-y1);
+                long dist2 = (cx-x2)*(cx-x2)+(cy-y2)*(cy-y2);
+                long temp = (dist1-r*r)*(dist2-r*r);
+                if(temp<0)
+                    cnt++;
+            }
+            System.out.println(cnt);
+        }
+        scan.close();
+    }
+}
